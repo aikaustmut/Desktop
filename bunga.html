@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Bunga Mekar</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #87ceeb, #ffefd5);
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .flower {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            animation: grow 4s infinite ease-in-out;
+        }
+
+        .petal {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: pink;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: bloom 4s infinite ease-in-out;
+        }
+
+        .petal:nth-child(1) {
+            top: -40px;
+            left: -20px;
+            animation-delay: 0.2s;
+        }
+
+        .petal:nth-child(2) {
+            top: -20px;
+            left: -40px;
+            animation-delay: 0.4s;
+        }
+
+        .petal:nth-child(3) {
+            top: 20px;
+            left: -40px;
+            animation-delay: 0.6s;
+        }
+
+        .petal:nth-child(4) {
+            top: 40px;
+            left: -20px;
+            animation-delay: 0.8s;
+        }
+
+        .petal:nth-child(5) {
+            top: 20px;
+            left: 20px;
+            animation-delay: 1s;
+        }
+
+        .petal:nth-child(6) {
+            top: -20px;
+            left: 20px;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes bloom {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes grow {
+            0%, 100% {
+                transform: scale(0.8);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+</body>
+</html>
